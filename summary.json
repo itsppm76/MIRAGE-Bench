@@ -1,0 +1,65 @@
+{
+  "benchmark_version": "2.0.0",
+  "cohort": "Pilot Cohort",
+  "entities": 103,
+  "published_runs": 249,
+  "distinct_officers": 1,
+  "evaluations_per_entity": {
+    "4": 6,
+    "5": 3,
+    "3": 23,
+    "2": 70,
+    "1": 1
+  },
+  "bands": {
+    "Frontier": 2,
+    "Excellent": 1,
+    "Strong": 43,
+    "Developing": 55,
+    "Weak": 1,
+    "Experimental": 1
+  },
+  "archetypes": {
+    "photoreal_human": 38,
+    "stylized_character": 62,
+    "nonhuman": 2,
+    "chat_persona": 1
+  },
+  "disclosure_status": {
+    "synthetic": 41,
+    "fictional": 59,
+    "hybrid_labelled": 3
+  },
+  "scopes": {
+    "FULL_SPECTRUM": 5,
+    "VISUAL": 3,
+    "IDENTITY": 93,
+    "CUSTOM": 1,
+    "INTERACTIVE": 1
+  },
+  "composite": {
+    "max": 98.0,
+    "min": 42.9,
+    "mean": 77.6
+  },
+  "module_means": {
+    "LOOK": 79.6,
+    "FLOW": 75.4,
+    "PERSONA": 77.1,
+    "INTENT": 81.9,
+    "TIME": 81.0,
+    "AGENT": 79.5,
+    "TRUST": 87.8,
+    "REACH": 69.0
+  },
+  "reach_scored": 103,
+  "reach_evidence_supplied": 0,
+  "caveats": [
+    "Every evaluation in this cohort was performed by a single officer. These are baseline measurements, not a multi-evaluator consensus.",
+    "Repeated evaluation by the same officer is not independent replication. The outlier exclusion and consensus aggregation in the scoring engine assume independent evaluators; with one officer they mainly smooth that officer's own variance between sittings. An entity with four evaluations here has been looked at four times by the same person, not corroborated by four people.",
+    "REACH scores were assigned without the supporting evidence fields (audience_total, recognitions, active_since) being populated, so the inputs behind a standing score are not independently checkable from this dataset. Those fields are exported when present and are empty here.",
+    "Scores describe benchmark performance under MIRAGE-Bench v1.0.0. They are not claims about quality, legitimacy, commercial success, consciousness or personhood.",
+    "Entities were evaluated from publicly observable material. Creators may contest any result through the correction process in CONTRIBUTING.md.",
+    "Module weights differ between benchmark versions. Always check each record's benchmark_version: v1.0.0 has seven modules and no REACH, v2.0.0 has eight. Composites from different versions are not directly comparable."
+  ]
+}

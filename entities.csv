@@ -1,0 +1,104 @@
+rank,slug,display_name,creator_label,archetype,disclosure_status,scope,composite,band,LOOK,FLOW,PERSONA,INTENT,TIME,AGENT,TRUST,REACH,evaluations,officers,trend_direction,audience_total,first_evaluated_at,benchmark_version
+1,shayari-nhe-01,Shayari NHE 01,Writistic Studios,photoreal_human,synthetic,FULL_SPECTRUM,98.0,Frontier,98.7,98.1,99.7,100.0,98.9,98.2,100.0,87.9,4,1,down,0,2026-09-16,2.0.0
+2,juliana-zetici,Juliana Zetici,Independent Creator,photoreal_human,synthetic,VISUAL,96.2,Frontier,96.5,97.6,,,,,100.0,89.3,5,1,flat,0,2026-09-17,2.0.0
+3,judy-goodvibes,Judy Goodvibes,Saihosan Studio,photoreal_human,synthetic,IDENTITY,95.1,Excellent,98.2,95.4,96.4,100.0,,,100.0,77.8,3,1,down,0,2026-09-16,2.0.0
+4,lil-miquela,Lil Miquela,Brud,photoreal_human,synthetic,IDENTITY,86.7,Strong,87.6,86.2,85.7,81.6,,,85.8,94.0,4,1,flat,0,2026-09-16,2.0.0
+5,kizuna-ai,Kizuna AI,Activ8 / Kizuna AI project,stylized_character,fictional,IDENTITY,85.2,Strong,81.6,83.9,83.1,84.5,,,90.0,95.0,2,1,up,0,2026-09-16,2.0.0
+6,lu-do-magalu,Lu Do Magalu,Magazine Luiza,stylized_character,fictional,IDENTITY,84.3,Strong,79.6,84.7,80.4,81.6,,,92.5,96.0,4,1,down,0,2026-09-16,2.0.0
+7,hatsune-miku,Hatsune Miku,Crypton Future Media,stylized_character,fictional,IDENTITY,84.0,Strong,79.4,85.5,77.8,83.3,,,89.9,100.0,2,1,up,0,2026-09-16,2.0.0
+8,code-miko,Code Miko,MikoVerse Inc. / The Technician,photoreal_human,hybrid_labelled,FULL_SPECTRUM,83.9,Strong,91.0,88.0,80.1,83.0,76.6,78.2,86.6,87.0,2,1,up,0,2026-09-16,2.0.0
+9,k-da,K/DA,Riot Games / League of Legends,stylized_character,fictional,IDENTITY,83.2,Strong,79.6,84.4,79.1,83.0,,,90.0,90.0,2,1,up,0,2026-09-16,2.0.0
+10,barbie,Barbie,Mattel,stylized_character,fictional,IDENTITY,83.1,Strong,78.0,83.1,83.7,81.8,,,88.5,88.0,2,1,up,0,2026-09-16,2.0.0
+11,naina-avtr,Naina Avtr,Avtr Labs,photoreal_human,synthetic,CUSTOM,82.8,Strong,84.0,78.4,75.6,82.9,93.2,,86.6,83.9,5,1,down,0,2026-09-16,2.0.0
+12,sophia,Sophia,Hanson Robotics,nonhuman,hybrid_labelled,FULL_SPECTRUM,82.7,Strong,87.0,77.0,81.8,85.5,75.9,75.9,87.9,95.0,2,1,up,0,2026-09-16,2.0.0
+13,kyra,Kyra,Futr Studios / Himanshu Goel,photoreal_human,synthetic,IDENTITY,82.6,Strong,84.1,81.0,77.1,82.8,,,86.3,90.0,3,1,down,0,2026-09-16,2.0.0
+14,imma,Imma,Aww Inc.,photoreal_human,synthetic,IDENTITY,82.2,Strong,82.4,77.5,77.8,81.6,,,85.5,96.0,3,1,up,0,2026-09-16,2.0.0
+15,alara-x,Alara X,IAMX Live Digital Human Studio,photoreal_human,synthetic,FULL_SPECTRUM,81.7,Strong,88.0,86.0,75.6,84.1,75.8,79.3,84.6,82.0,3,1,up,0,2026-09-16,2.0.0
+16,shudu,Shudu,The Diigitals Studio,photoreal_human,fictional,IDENTITY,81.6,Strong,82.4,77.5,75.9,82.8,,,86.3,93.0,4,1,down,0,2026-09-16,2.0.0
+17,milla-sofia,Milla Sofia,Independent / Milla Sofia team,photoreal_human,synthetic,IDENTITY,81.6,Strong,83.3,76.7,77.5,84.1,,,86.6,87.0,3,1,flat,0,2026-09-16,2.0.0
+18,rozy,Rozy,Sidus Studio-X,photoreal_human,synthetic,IDENTITY,81.6,Strong,82.4,77.5,75.6,81.6,,,85.5,96.0,3,1,up,0,2026-09-16,2.0.0
+19,aditi-aimuse,Aditi Aimuse,AImuse / independent,photoreal_human,synthetic,IDENTITY,81.2,Strong,81.8,77.5,77.8,82.8,,,86.3,86.0,3,1,down,0,2026-09-16,2.0.0
+20,aitana-l-pez,Aitana López,The Clueless,photoreal_human,synthetic,IDENTITY,81.1,Strong,81.8,77.5,77.5,82.8,,,86.3,86.0,4,1,up,0,2026-09-16,2.0.0
+21,thalasya,Thalasya,Magnavem Studio,photoreal_human,synthetic,IDENTITY,81.0,Strong,82.4,79.3,75.9,81.6,,,85.5,86.0,3,1,flat,0,2026-09-16,2.0.0
+22,aswathy-achu,Aswathy Achu,Alforia.ai / independent,photoreal_human,synthetic,IDENTITY,80.7,Strong,81.8,77.5,75.6,82.8,,,86.3,86.0,3,1,down,0,2026-09-16,2.0.0
+23,aliona-pole,Aliona Pole,Malivar / independent,photoreal_human,synthetic,IDENTITY,80.7,Strong,81.8,75.2,77.5,84.1,,,86.6,84.0,3,1,down,0,2026-09-16,2.0.0
+24,zara-shatavari,Zara Shatavari,Rahul Choudhry / team,photoreal_human,synthetic,IDENTITY,80.6,Strong,81.8,78.5,77.5,82.9,,,85.8,80.0,3,1,up,0,2026-09-16,2.0.0
+25,qai-qai,Qai Qai,Alexis Ohanian / Serena Williams family,stylized_character,fictional,IDENTITY,80.6,Strong,76.4,78.7,81.3,82.5,,,89.1,80.0,2,1,up,0,2026-09-16,2.0.0
+26,alicia-idris,Alicia Idris,Independent,photoreal_human,synthetic,IDENTITY,80.4,Strong,81.8,76.7,79.5,82.9,,,86.6,76.0,3,1,down,0,2026-09-16,2.0.0
+27,satiko,Satiko,Brazilian media/brand ecosystem,photoreal_human,synthetic,IDENTITY,80.3,Strong,82.4,78.2,77.8,81.6,,,85.5,78.0,3,1,down,0,2026-09-16,2.0.0
+28,leya-love,Leya Love,Cosmiq Universe AG,photoreal_human,synthetic,IDENTITY,80.1,Strong,81.8,75.6,75.6,82.9,,,86.6,84.0,3,1,flat,0,2026-09-16,2.0.0
+29,plusticboy-zinn,Plusticboy / Zinn,Aww Inc.,photoreal_human,synthetic,IDENTITY,79.9,Strong,81.8,76.7,77.5,84.1,,,85.8,76.0,3,1,down,0,2026-09-16,2.0.0
+30,daisy,Daisy,YOOX,stylized_character,fictional,IDENTITY,79.9,Strong,77.3,79.3,78.8,81.6,,,88.0,78.0,3,1,down,0,2026-09-16,2.0.0
+31,geico-gecko,GEICO Gecko,GEICO,stylized_character,fictional,IDENTITY,79.8,Strong,77.2,76.1,78.5,81.8,,,89.1,82.0,2,1,flat,0,2026-09-16,2.0.0
+32,bejby-blue,Bejby Blue,Independent,photoreal_human,synthetic,IDENTITY,79.7,Strong,81.8,75.6,77.5,84.1,,,85.8,76.0,3,1,down,0,2026-09-16,2.0.0
+33,ai-ailynn,AI Ailynn,Independent / VirtualHumans ecosystem,photoreal_human,synthetic,IDENTITY,79.7,Strong,81.8,75.6,77.5,82.9,,,86.6,76.0,3,1,down,0,2026-09-16,2.0.0
+34,ria,Ria,Aww Inc.,photoreal_human,synthetic,IDENTITY,79.7,Strong,81.8,75.6,77.5,82.9,,,86.6,76.0,3,1,down,0,2026-09-16,2.0.0
+35,teflon-sega,Teflon Sega,Independent / virtual music project,photoreal_human,synthetic,IDENTITY,79.6,Strong,83.3,76.7,77.5,82.9,,,85.8,72.0,3,1,down,0,2026-09-16,2.0.0
+36,mar-ia,Mar.ia,VirtualHumans / independent,photoreal_human,synthetic,IDENTITY,79.6,Strong,82.4,76.6,80.4,78.3,,,84.9,73.0,2,1,down,0,2026-09-16,2.0.0
+37,noonoouri,Noonoouri,Jörg Zuber,stylized_character,synthetic,IDENTITY,79.0,Strong,77.7,77.5,75.9,81.6,,,86.6,80.0,3,1,up,0,2026-09-16,2.0.0
+38,cb-of-casas-bahia,CB of Casas Bahia,Casas Bahia,stylized_character,fictional,IDENTITY,79.0,Strong,77.3,77.1,80.2,79.3,,,88.5,73.0,2,1,down,0,2026-09-16,2.0.0
+39,seraphine,Seraphine,Riot Games,stylized_character,fictional,IDENTITY,78.8,Strong,76.9,77.8,78.3,82.5,,,88.5,72.0,2,1,down,0,2026-09-16,2.0.0
+40,blawko,Blawko,Brud,photoreal_human,synthetic,IDENTITY,78.7,Strong,82.7,72.3,75.8,82.1,,,86.4,76.0,2,1,down,0,2026-09-16,2.0.0
+41,pete-zaroll,Pete Zaroll,Totino's / brand studio,stylized_character,fictional,IDENTITY,78.5,Strong,76.2,76.7,79.4,79.3,,,88.5,73.0,2,1,down,0,2026-09-16,2.0.0
+42,apoki,APOKI,APOKI project / virtual-artist team,stylized_character,fictional,IDENTITY,78.2,Strong,76.9,76.8,76.3,80.0,,,89.1,74.0,2,1,down,0,2026-09-16,2.0.0
+43,mikazuki-arion,Mikazuki Arion,Eon of Stars,stylized_character,fictional,IDENTITY,78.2,Strong,76.7,75.5,79.3,80.0,,,88.5,71.0,2,1,down,0,2026-09-16,2.0.0
+44,knox-frost,Knox Frost,Darkroom / independent,photoreal_human,synthetic,IDENTITY,78.1,Strong,82.4,71.8,74.3,80.8,,,84.8,78.0,2,1,down,0,2026-09-16,2.0.0
+45,naevis,Naevis,SM Entertainment,stylized_character,fictional,IDENTITY,78.1,Strong,76.9,74.8,77.3,82.5,,,89.1,72.0,2,1,down,0,2026-09-16,2.0.0
+46,fn-meka,FN Meka,Factory New / music ecosystem,photoreal_human,synthetic,IDENTITY,78.0,Strong,84.1,71.3,72.3,80.8,,,84.8,79.0,2,1,down,0,2026-09-16,2.0.0
+47,tilly-norwood,Tilly Norwood,Particle6 / Xicoia / Eline van der Velden,photoreal_human,synthetic,FULL_SPECTRUM,77.9,Developing,84.0,76.0,75.6,82.6,71.6,71.1,88.1,75.0,3,1,flat,0,2026-09-16,2.0.0
+48,bermuda,Bermuda,Brud / digital creator ecosystem,photoreal_human,synthetic,IDENTITY,77.9,Developing,82.7,70.4,74.3,81.5,,,86.4,76.0,2,1,down,0,2026-09-16,2.0.0
+49,mono-mars,Mono Mars,Independent,nonhuman,fictional,IDENTITY,77.9,Developing,75.4,75.3,81.8,85.1,,,89.1,63.0,2,1,down,0,2026-09-16,2.0.0
+50,kuki,Kuki,Pandorabots / ICONIQ,chat_persona,synthetic,INTERACTIVE,77.9,Developing,,,78.6,82.5,75.2,74.2,87.3,70.0,2,1,down,0,2026-09-16,2.0.0
+51,chloe-pawapua,Chloe Pawapua,Indonesia VTuber ecosystem,stylized_character,fictional,IDENTITY,77.7,Developing,76.7,78.0,79.3,80.0,,,88.5,64.0,2,1,down,0,2026-09-16,2.0.0
+52,nobody-sausage,Nobody Sausage,Nobody Sausage studio,stylized_character,fictional,IDENTITY,77.4,Developing,78.8,73.2,74.7,79.3,,,89.1,73.0,2,1,down,0,2026-09-16,2.0.0
+53,janky,Janky,SUPERPLASTIC,stylized_character,fictional,IDENTITY,77.2,Developing,76.2,71.4,76.3,80.0,,,88.5,76.0,2,1,down,0,2026-09-16,2.0.0
+54,invain,InVain,UpperRank.gg / independent,stylized_character,fictional,IDENTITY,77.2,Developing,76.7,76.0,79.3,80.0,,,88.5,63.0,2,1,down,0,2026-09-16,2.0.0
+55,key-oriesa,Key Oriesa,Independent,stylized_character,fictional,IDENTITY,77.0,Developing,76.2,75.5,79.3,80.0,,,88.5,63.0,2,1,down,0,2026-09-16,2.0.0
+56,elya-rosabelle,Elya Rosabelle,Independent,stylized_character,fictional,IDENTITY,77.0,Developing,76.2,75.5,79.3,80.0,,,88.5,63.0,2,1,down,0,2026-09-16,2.0.0
+57,kobo-kanaeru,Kobo Kanaeru,Hololive / COVER Corp.,stylized_character,fictional,IDENTITY,77.0,Developing,81.1,80.2,80.1,82.9,,,88.0,48.0,3,1,down,0,2026-09-16,2.0.0
+58,guggimon,Guggimon,SUPERPLASTIC,stylized_character,fictional,IDENTITY,76.8,Developing,76.4,70.9,71.8,82.5,,,89.1,79.0,2,1,down,0,2026-09-16,2.0.0
+59,squeaky-and-roy,Squeaky and Roy,Independent digital character project,stylized_character,fictional,IDENTITY,76.7,Developing,76.2,70.8,77.3,80.0,,,88.5,71.0,2,1,down,0,2026-09-16,2.0.0
+60,ryan-seoul-icon,Ryan Seoul Icon,Independent / Korean virtual-influencer ecosystem,photoreal_human,synthetic,IDENTITY,76.6,Developing,82.7,68.8,72.3,81.4,,,84.8,73.0,2,1,down,0,2026-09-16,2.0.0
+61,kaf,KAF,KAMITSUBAKI STUDIO,stylized_character,fictional,IDENTITY,76.1,Developing,78.9,69.9,71.8,80.6,,,89.1,72.0,2,1,down,0,2026-09-16,2.0.0
+62,elaine-celestia,Elaine Celestia,REMEMORIES.ID,stylized_character,fictional,IDENTITY,76.1,Developing,76.7,72.5,74.9,81.8,,,89.0,65.0,2,1,down,0,2026-09-16,2.0.0
+63,good-advice-cupcake,Good Advice Cupcake,"Love, Diana / digital animation ecosystem",stylized_character,fictional,IDENTITY,76.0,Developing,76.2,69.8,73.8,82.5,,,88.5,71.0,2,1,down,0,2026-09-16,2.0.0
+64,ai-candii,AI Candii,VChiban,stylized_character,synthetic,IDENTITY,76.0,Developing,76.7,72.0,74.4,78.9,,,84.3,73.0,2,1,down,0,2026-09-16,2.0.0
+65,noe-lavonte,Noe Lavonte,Independent,stylized_character,fictional,IDENTITY,76.0,Developing,76.4,72.3,77.3,80.0,,,88.5,63.0,2,1,down,0,2026-09-16,2.0.0
+66,chill-pill,Chill Pill,Independent,stylized_character,fictional,IDENTITY,75.9,Developing,76.2,69.8,74.8,80.0,,,88.5,71.0,2,1,down,0,2026-09-16,2.0.0
+67,crazynho,Crazynho,Independent / virtual-character ecosystem,stylized_character,fictional,IDENTITY,75.8,Developing,76.2,70.4,73.8,80.0,,,88.5,71.0,2,1,down,0,2026-09-16,2.0.0
+68,rocchi,Rocchi,Independent,stylized_character,fictional,IDENTITY,75.8,Developing,76.7,73.1,74.8,80.0,,,88.5,64.0,2,1,down,0,2026-09-16,2.0.0
+69,bao,Bao,Independent / talent ecosystem,stylized_character,fictional,IDENTITY,75.7,Developing,76.9,73.6,73.8,80.6,,,88.5,64.0,2,1,down,0,2026-09-16,2.0.0
+70,juliana-shafira,Juliana Shafira,Independent,stylized_character,fictional,IDENTITY,75.6,Developing,76.2,71.8,74.9,79.3,,,89.0,65.0,2,1,down,0,2026-09-16,2.0.0
+71,nanda-tayo,Nanda Tayo,Independent,stylized_character,fictional,IDENTITY,75.6,Developing,76.7,73.1,73.8,80.6,,,88.5,64.0,2,1,down,0,2026-09-16,2.0.0
+72,megalodon,Megalodon,Independent,stylized_character,fictional,IDENTITY,75.5,Developing,76.7,70.6,74.8,83.1,,,88.5,63.0,2,1,down,0,2026-09-16,2.0.0
+73,yameii-online,Yameii Online,Independent / animation & music ecosystem,stylized_character,fictional,IDENTITY,75.4,Developing,74.1,69.9,72.8,82.5,,,88.5,72.0,2,1,down,0,2026-09-16,2.0.0
+74,istmodius,Istmodius,Beer to Bat / independent,stylized_character,fictional,IDENTITY,75.3,Developing,76.7,71.1,74.8,80.0,,,88.5,63.0,2,1,down,0,2026-09-16,2.0.0
+75,mythia-batford,Mythia Batford,Independent / VTuber ecosystem,stylized_character,fictional,IDENTITY,75.3,Developing,76.9,78.5,79.3,80.0,,,88.5,48.0,2,1,down,0,2026-09-16,2.0.0
+76,ion-g-ttlich,Ion Göttlich,Independent,stylized_character,fictional,IDENTITY,75.2,Developing,76.2,66.8,71.8,83.1,,,90.6,71.0,2,1,down,0,2026-09-16,2.0.0
+77,mystic,Mystic,Independent,stylized_character,fictional,IDENTITY,75.2,Developing,76.7,71.1,73.8,82.0,,,88.5,63.0,2,1,down,0,2026-09-16,2.0.0
+78,kawaguu,KawaGuu,Independent,stylized_character,fictional,IDENTITY,75.0,Developing,76.7,70.6,73.8,80.6,,,88.5,63.0,2,1,down,0,2026-09-16,2.0.0
+79,gingitsune-gehenna,Gingitsune Gehenna,Independent,stylized_character,fictional,IDENTITY,74.9,Developing,76.7,70.6,73.8,80.0,,,88.5,63.0,2,1,down,0,2026-09-16,2.0.0
+80,gema-gathik,Gema Gathik,MagniV,stylized_character,fictional,IDENTITY,74.9,Developing,75.3,78.5,79.3,80.0,,,88.5,48.0,2,1,down,0,2026-09-16,2.0.0
+81,akemi-nekomachi,Akemi Nekomachi,Nekomachi Studio,stylized_character,fictional,IDENTITY,74.8,Developing,76.7,69.8,73.8,80.6,,,88.5,63.0,2,1,down,0,2026-09-16,2.0.0
+82,shina-adelard,Shina Adelard,Independent,stylized_character,fictional,IDENTITY,74.8,Developing,76.2,70.4,73.8,80.0,,,88.5,63.0,2,1,down,0,2026-09-16,2.0.0
+83,kaisa,Kaisa,K/DA / Riot Games ecosystem,stylized_character,fictional,IDENTITY,74.6,Developing,78.2,74.1,76.3,82.5,,,90.0,48.0,2,1,down,0,2026-09-16,2.0.0
+84,lilian-grimmxandra,Lilian Grimmxandra,Independent / virtual-creator ecosystem,stylized_character,fictional,IDENTITY,74.4,Developing,76.7,74.7,79.3,80.0,,,88.5,47.0,2,1,down,0,2026-09-16,2.0.0
+85,ruby-gloom,Ruby Gloom,SS_K_I_N_C_A_R_ee concept,stylized_character,synthetic,IDENTITY,74.3,Developing,73.4,70.6,76.8,79.0,,,84.3,63.0,2,1,down,0,2026-09-16,2.0.0
+86,adeline-frostine,Adeline Frostine,Independent,stylized_character,fictional,IDENTITY,74.3,Developing,76.2,74.6,79.3,80.0,,,88.5,47.0,2,1,down,0,2026-09-16,2.0.0
+87,giri,Giri,GEEXPLUS,stylized_character,fictional,IDENTITY,73.7,Developing,76.2,67.4,71.8,80.0,,,88.5,63.0,2,1,down,0,2026-09-16,2.0.0
+88,fae-el27-fleur,Fae EL27 Fleur,Independent,stylized_character,synthetic,IDENTITY,73.4,Developing,73.4,75.3,78.8,82.1,,,83.8,47.0,2,1,down,0,2026-09-16,2.0.0
+89,zumi,Zumi,Independent,stylized_character,fictional,IDENTITY,73.3,Developing,76.7,70.6,77.3,80.6,,,88.5,47.0,2,1,down,0,2026-09-16,2.0.0
+90,alba-renai,Alba Renai,VIA Talents / Mediaset-linked production,photoreal_human,synthetic,IDENTITY,73.2,Developing,81.6,70.6,73.3,82.1,,,84.9,47.0,2,1,down,0,2026-09-16,2.0.0
+91,ariella-durand,Ariella Durand,Independent,photoreal_human,synthetic,IDENTITY,73.0,Developing,79.9,70.4,74.3,82.1,,,84.9,47.0,2,1,down,0,2026-09-16,2.0.0
+92,puff-puff,Puff Puff,Independent / toy-character ecosystem,stylized_character,fictional,IDENTITY,72.9,Developing,76.2,69.8,74.8,82.5,,,90.6,47.0,2,1,down,0,2026-09-16,2.0.0
+93,lily-ifeta,Lily Ifeta,REMEMORIES.ID,stylized_character,fictional,IDENTITY,72.8,Developing,76.7,71.1,74.8,80.0,,,88.5,47.0,2,1,down,0,2026-09-16,2.0.0
+94,violetta-calytrix,Violetta Calytrix,Independent,stylized_character,fictional,IDENTITY,72.8,Developing,76.7,71.1,74.8,80.0,,,88.5,47.0,2,1,down,0,2026-09-16,2.0.0
+95,jibakurei-ruki,Jibakurei Ruki,Independent VTuber project,stylized_character,fictional,IDENTITY,72.8,Developing,76.9,70.6,74.8,80.6,,,88.5,47.0,2,1,down,0,2026-09-16,2.0.0
+96,aoki-ryuuzen,Aoki Ryuuzen,Independent,stylized_character,fictional,IDENTITY,72.7,Developing,76.7,70.6,74.8,80.6,,,88.5,47.0,2,1,down,0,2026-09-16,2.0.0
+97,noemi-hestia,Noemi Hestia,Independent,stylized_character,fictional,IDENTITY,72.5,Developing,76.7,70.6,73.8,80.6,,,88.5,47.0,2,1,down,0,2026-09-16,2.0.0
+98,nephil-sigurd,Nephil Sigurd,Independent,stylized_character,fictional,IDENTITY,72.5,Developing,76.7,69.8,74.8,80.0,,,88.5,47.0,2,1,down,0,2026-09-16,2.0.0
+99,airuma-kohito,Airuma Kohito,Independent,stylized_character,fictional,IDENTITY,72.0,Developing,73.4,70.6,74.8,80.0,,,89.1,47.0,2,1,down,0,2026-09-16,2.0.0
+100,cy-yu,Cy Yu,Alejandro Saab / creator ecosystem,stylized_character,hybrid_labelled,IDENTITY,71.7,Developing,76.7,69.8,74.3,79.6,,,82.7,47.0,2,1,down,0,2026-09-16,2.0.0
+101,emily-pellegrini,Emily Pellegrini,Professor EP / independent creator,photoreal_human,synthetic,IDENTITY,70.9,Developing,83.5,77.8,77.5,82.9,,,86.6,25.5,5,1,down,0,2026-09-16,2.0.0
+102,siddhi,Siddhi,Not Disclosed,photoreal_human,synthetic,VISUAL,49.7,Weak,80.7,62.2,,,,,60.8,10.6,4,1,down,0,2026-09-16,2.0.0
+103,mira-nova,Mira Nova,Sibi Selvam / Independent Creator,photoreal_human,synthetic,VISUAL,42.9,Experimental,85.8,72.3,,,,,97.6,1.9,1,1,new,0,2026-09-18,2.0.0

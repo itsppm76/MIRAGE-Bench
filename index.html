@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MIRAGE-Bench — the open benchmark for synthetic social entities</title>
+<meta name="description" content="An open benchmark for AI characters, virtual influencers and digital personas. 103 entities evaluated. Free to read, free to test, free to be listed.">
+<meta name="theme-color" content="#07070c">
+<meta name="color-scheme" content="dark">
+<meta property="og:title" content="MIRAGE-Bench">
+<meta property="og:description" content="The open benchmark for AI characters, virtual influencers and digital personas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#07070c; --surface:#11111a; --raise:#1a1a27; --line:#26263a; --line-soft:#1e1e2e;
+  --text:#f2f2f7; --dim:#8b8ba3; --dimmer:#5f5f75;
+  --hot:#ff3d57; --cool:#35e0d0; --gold:#f5c451; --warn:#ff9f43; --up:#3ddc97;
+  --ease:cubic-bezier(.2,.7,.3,1);
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--text);overflow-x:hidden;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:15.5px;line-height:1.6;
+  -webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:'Bricolage Grotesque',Inter,sans-serif;font-weight:800;letter-spacing:-.025em;line-height:1.06;margin:0}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+.muted{color:var(--dim)}
+.tiny{font-size:12px}
+
+/* ---------- ambient motion ---------- */
+.aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.aurora i{position:absolute;display:block;border-radius:50%;filter:blur(90px);opacity:.5;
+  animation:drift 26s var(--ease) infinite alternate}
+.aurora i:nth-child(1){width:52vw;height:52vw;left:-14vw;top:-16vw;background:radial-gradient(circle,#4a2a6b,transparent 68%)}
+.aurora i:nth-child(2){width:44vw;height:44vw;right:-12vw;top:4vh;background:radial-gradient(circle,#1f6f6a,transparent 68%);animation-delay:-9s}
+.aurora i:nth-child(3){width:38vw;height:38vw;left:24vw;top:52vh;background:radial-gradient(circle,#7a2338,transparent 68%);animation-delay:-16s}
+@keyframes drift{
+  0%{transform:translate3d(0,0,0) scale(1)}
+  50%{transform:translate3d(4vw,-3vh,0) scale(1.14)}
+  100%{transform:translate3d(-3vw,4vh,0) scale(.94)}
+}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.045;mix-blend-mode:overlay;
+  background-image:repeating-linear-gradient(115deg,#fff 0 1px,transparent 1px 4px)}
+main{position:relative;z-index:2}
+
+/* ---------- nav ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;gap:22px;
+  padding:14px clamp(18px,4vw,40px);padding-top:calc(14px + env(safe-area-inset-top));
+  background:linear-gradient(180deg,rgba(7,7,12,.94),rgba(7,7,12,0));transition:background .3s}
+header.solid{background:rgba(7,7,12,.96);border-bottom:1px solid var(--line-soft);backdrop-filter:blur(12px)}
+.brand{font-family:'Bricolage Grotesque';font-weight:800;font-size:19px;letter-spacing:-.03em}
+.brand i{font-style:normal;color:var(--hot)}
+.brand b{color:var(--cool)}
+nav{display:flex;gap:20px;font-size:14px;color:var(--dim);margin-left:auto}
+nav a{transition:color .2s}
+nav a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;
+  font-weight:600;font-size:14.5px;transition:transform .16s var(--ease),background .2s,border-color .2s;border:1px solid transparent}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--hot);color:#fff}
+.btn-primary:hover{background:#ff556c;transform:translateY(-2px)}
+.btn-ghost{border-color:var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--dim);transform:translateY(-2px)}
+.btn-cool{background:var(--cool);color:#04231f}
+.btn-cool:hover{background:#4fe9db;transform:translateY(-2px)}
+@media(max-width:820px){nav{display:none}}
+
+/* ---------- hero ---------- */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;
+  padding:120px 0 70px;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;color:var(--dim);
+  border:1px solid var(--line);border-radius:999px;padding:7px 15px 7px 11px;margin-bottom:26px;
+  background:rgba(17,17,26,.6);backdrop-filter:blur(6px)}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--cool);
+  box-shadow:0 0 0 0 rgba(53,224,208,.6);animation:pulse 2.6s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 11px rgba(53,224,208,0)}100%{box-shadow:0 0 0 0 rgba(53,224,208,0)}}
+.hero h1{font-size:clamp(42px,8.4vw,92px);margin-bottom:22px}
+.hero h1 .l2{display:block;background:linear-gradient(100deg,var(--hot),var(--gold) 38%,var(--cool));
+  -webkit-background-clip:text;background-clip:text;color:transparent;background-size:220% auto;
+  animation:shimmer 9s linear infinite}
+@keyframes shimmer{to{background-position:220% center}}
+.hero p.lede{font-size:clamp(16px,2.1vw,19.5px);color:#c8c8d8;max-width:60ch;margin:0 0 30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:54px}
+
+/* ---------- counters ---------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;
+  border-top:1px solid var(--line-soft);padding-top:26px}
+.stat .n{font-family:'Bricolage Grotesque';font-weight:800;font-size:clamp(30px,4.4vw,44px);
+  letter-spacing:-.03em;line-height:1}
+.stat .k{font-size:12.5px;color:var(--dim);margin-top:6px}
+
+/* ---------- reveal on scroll ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal[data-d="1"]{transition-delay:.08s}
+.reveal[data-d="2"]{transition-delay:.16s}
+.reveal[data-d="3"]{transition-delay:.24s}
+.reveal[data-d="4"]{transition-delay:.32s}
+
+section{padding:clamp(70px,10vh,120px) 0;position:relative}
+.sec-head{max-width:70ch;margin-bottom:40px}
+.sec-head h2{font-size:clamp(28px,4.4vw,46px);margin-bottom:14px}
+.sec-head p{color:var(--dim);margin:0;font-size:16.5px}
+
+/* ---------- modules ---------- */
+.mods{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:14px}
+.mod{background:var(--surface);border:1px solid var(--line-soft);border-radius:16px;padding:22px;
+  position:relative;overflow:hidden;transition:transform .3s var(--ease),border-color .3s}
+.mod:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.2)}
+.mod::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;
+  background:linear-gradient(90deg,var(--hot),var(--cool));transform:scaleX(0);transform-origin:left;
+  transition:transform .45s var(--ease)}
+.mod:hover::after{transform:scaleX(1)}
+.mod .code{font-family:'Bricolage Grotesque';font-weight:800;font-size:19px;margin-bottom:4px}
+.mod .w{font-size:11.5px;color:var(--cool);font-weight:700;letter-spacing:.04em}
+.mod p{font-size:13.5px;color:var(--dim);margin:10px 0 0;line-height:1.55}
+
+/* ---------- thesis ---------- */
+.thesis{background:var(--surface);border:1px solid var(--line);border-radius:22px;
+  padding:clamp(26px,4vw,46px);position:relative;overflow:hidden}
+.thesis::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(60% 110% at 12% 0%,rgba(255,61,87,.1),transparent 62%);pointer-events:none}
+.thesis blockquote{font-family:'Bricolage Grotesque';font-weight:700;font-size:clamp(21px,3.2vw,32px);
+  line-height:1.24;margin:0 0 20px;max-width:26ch;letter-spacing:-.02em}
+.thesis blockquote em{font-style:normal;color:var(--cool)}
+.formula{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:var(--cool);
+  background:var(--ink);border:1px solid var(--line);border-radius:12px;padding:16px 18px;
+  overflow-x:auto;margin-top:22px}
+
+/* ---------- leaderboard preview ---------- */
+.lb{width:100%;border-collapse:collapse;font-size:14.5px}
+.lb th{text-align:left;font-size:11.5px;color:var(--dim);font-weight:600;padding:11px 12px;
+  border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.05em}
+.lb td{padding:13px 12px;border-bottom:1px solid var(--line-soft)}
+.lb tr{transition:background .2s}
+.lb tr:hover td{background:rgba(255,255,255,.03)}
+.rk{font-family:'Bricolage Grotesque';font-weight:800;color:var(--dimmer);width:42px}
+.rk.top{color:var(--gold)}
+.sc{font-family:'Bricolage Grotesque';font-weight:800;font-size:17px}
+.chip{display:inline-block;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:700;
+  border:1px solid var(--line);color:var(--dim)}
+.chip.frontier{color:var(--gold);border-color:rgba(245,196,81,.4);background:rgba(245,196,81,.09)}
+.chip.strong{color:#a9c6ff;border-color:rgba(120,160,255,.3);background:rgba(120,160,255,.08)}
+.chip.developing{color:#ffcf9a;border-color:rgba(255,159,67,.3);background:rgba(255,159,67,.08)}
+.bars{display:flex;gap:3px;align-items:flex-end;height:26px}
+.bars span{width:8px;border-radius:2px 2px 0 0;background:var(--cool);opacity:.85;
+  transform-origin:bottom;animation:grow .7s var(--ease) both}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@media(max-width:700px){.hide-s{display:none}}
+
+/* ---------- audience cards ---------- */
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line-soft);border-radius:18px;padding:26px;
+  transition:transform .3s var(--ease),border-color .3s}
+.card:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.2)}
+.card h3{font-size:18px;margin-bottom:8px;font-family:Inter;font-weight:700;letter-spacing:0}
+.card p{font-size:14px;color:var(--dim);margin:0 0 16px;line-height:1.6}
+.card .go{font-size:13.5px;font-weight:700;color:var(--cool)}
+.card .go::after{content:' →';transition:margin .2s}
+.card:hover .go::after{margin-left:4px}
+
+/* ---------- caveat ---------- */
+.caveat{border-left:2px solid var(--warn);padding:2px 0 2px 18px;margin:20px 0;color:var(--dim);font-size:14.5px}
+.caveat strong{color:var(--text)}
+
+footer{border-top:1px solid var(--line-soft);padding:46px 0 70px;color:var(--dimmer);font-size:13.5px}
+footer a{color:var(--dim)}
+footer a:hover{color:var(--text)}
+.fgrid{display:flex;gap:40px;flex-wrap:wrap;justify-content:space-between}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header id="nav">
+  <a class="brand" href="#top">MIRAGE<i>-</i><b>Bench</b></a>
+  <nav>
+    <a href="#modules">Modules</a>
+    <a href="#cohort">Pilot Cohort</a>
+    <a href="#join">Take part</a>
+    <a href="docs/METHODOLOGY.md">Methodology</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="hero wrap">
+  <div class="reveal in">
+    <span class="eyebrow"><span class="pulse"></span> Benchmark v2.0.0 · Pilot Cohort published</span>
+    <h1>Measuring synthetic<span class="l2">social entities.</span></h1>
+    <p class="lede">
+      An open benchmark for AI characters, virtual influencers and digital personas.
+      Eight constructs, scored separately, so realism can never quietly stand in for honesty
+      and popularity can never quietly stand in for quality.
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#cohort">See the 103 entities</a>
+      <a class="btn btn-ghost" href="docs/METHODOLOGY.md">Read the methodology</a>
+      <a class="btn btn-cool" href="../../issues/new?template=entity-application.yml">Submit an entity</a>
+    </div>
+    <div class="stats" id="stats">
+      <div class="stat"><div class="n" data-count="103">0</div><div class="k">entities evaluated</div></div>
+      <div class="stat"><div class="n" data-count="249">0</div><div class="k">published runs</div></div>
+      <div class="stat"><div class="n" data-count="45">0</div><div class="k">scored components</div></div>
+      <div class="stat"><div class="n" data-count="0" data-suffix="₹">0</div><div class="k">cost to anyone, ever</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="modules" class="wrap">
+  <div class="sec-head reveal">
+    <h2>Eight things, measured separately</h2>
+    <p>A single score for "how good is this AI character" would be useless, because the question bundles
+       together things that genuinely come apart. An entity can be photorealistic and incoherent,
+       textually brilliant and dishonest about what it is, or none of those things and enormously
+       famous.</p>
+  </div>
+  <div class="mods" id="mods"></div>
+</section>
+
+<section class="wrap">
+  <div class="thesis reveal">
+    <blockquote>Honesty wins ties. <em>Popularity never decides them.</em></blockquote>
+    <p class="muted" style="max-width:64ch;margin:0 0 14px">
+      An entity can be flawlessly photorealistic and still score badly. TRUST is measured
+      independently, and a score below 50 caps the composite at 69.9 no matter how convincing
+      the entity looks. Craft never buys back disclosure.
+    </p>
+    <p class="muted" style="max-width:64ch;margin:0">
+      v2 added REACH so recognition counts — but raw audience is the lowest-weighted component
+      of the lowest-weighted module, scored logarithmically, and REACH is bounded to 20 points
+      above the median craft module. An entity with excellent craft and no audience scores
+      <strong style="color:var(--text)">81.8</strong>; one with mediocre craft and maximum fame
+      scores <strong style="color:var(--text)">56.6</strong>.
+    </p>
+    <div class="formula">MIRAGE Index = 100 × exp( Σ wᵢ × ln( max(sᵢ, 1) / 100 ) )</div>
+    <p class="tiny muted" style="margin:14px 0 0">
+      A geometric mean, not an average — one collapsed dimension drags the whole score down
+      instead of being hidden by six strong ones.
+    </p>
+  </div>
+</section>
+
+<section id="cohort" class="wrap">
+  <div class="sec-head reveal">
+    <h2>The Pilot Cohort</h2>
+    <p>103 entities evaluated under v1.0.0 — Lil Miquela, Kizuna AI, Lu do Magalu, Shudu, Barbie,
+       Kobo Kanaeru, alongside independent and studio projects. Open data, free to use.
+       Evaluated under v2.0.0 across all eight modules.</p>
+  </div>
+  <div class="reveal" style="background:var(--surface);border:1px solid var(--line-soft);border-radius:18px;padding:8px 10px;overflow-x:auto">
+    <table class="lb">
+      <thead><tr><th>#</th><th>Entity</th><th class="hide-s">Creator</th><th>Index</th><th>Band</th><th class="hide-s">Profile</th></tr></thead>
+      <tbody id="lbbody"><tr><td colspan="6" style="padding:30px;text-align:center" class="muted">Loading the cohort…</td></tr></tbody>
+    </table>
+  </div>
+  <div class="caveat reveal">
+    <strong>Read this before citing it.</strong> Every evaluation in this cohort was performed by a
+    single officer. Most entities now carry two or more evaluations, but repeated evaluation by
+    the same officer is not independent replication — outlier exclusion assumes independent
+    evaluators, and with one officer it mainly smooths that officer's own variance. REACH scores
+    were also assigned without the supporting evidence fields being recorded. The top-ranked entity belongs to the benchmark's author and was
+    self-evaluated, which is disclosed in <a href="GOVERNANCE.md" style="color:var(--cool)">GOVERNANCE.md</a>
+    rather than left to be discovered. These are baseline measurements inviting challenge, not settled findings.
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px" class="reveal">
+    <a class="btn btn-ghost" href="data/pilot-cohort/entities.csv">Download CSV</a>
+    <a class="btn btn-ghost" href="data/pilot-cohort/entities.json">Download JSON</a>
+    <a class="btn btn-ghost" href="data/pilot-cohort/">Browse the dataset</a>
+  </div>
+</section>
+
+<section id="join" class="wrap">
+  <div class="sec-head reveal">
+    <h2>Everyone has a way in</h2>
+    <p>Nothing here costs anything, and no affiliation is required. The fastest way to make this
+       benchmark trustworthy is for other people to run it.</p>
+  </div>
+  <div class="who">
+    <div class="card reveal" data-d="1">
+      <h3>Viewers</h3>
+      <p>Read every score, run and chart. No account, no fee, no wall. Ever.</p>
+      <a class="go" href="data/pilot-cohort/">Browse the data</a>
+    </div>
+    <div class="card reveal" data-d="2">
+      <h3>Creators</h3>
+      <p>Submit your entity. You will get the score the evidence supports — this repository
+         publishes low scores.</p>
+      <a class="go" href="../../issues/new?template=entity-application.yml">Apply an entity</a>
+    </div>
+    <div class="card reveal" data-d="3">
+      <h3>Evaluators</h3>
+      <p>Become an Intent Officer. This benchmark has one officer, which is its biggest
+         weakness — a second independent evaluator beats any feature.</p>
+      <a class="go" href="../../issues/new?template=officer-application.yml">Apply to evaluate</a>
+    </div>
+    <div class="card reveal" data-d="4">
+      <h3>Sceptics</h3>
+      <p>Contest a score, or find a profile where the maths gives an absurd answer. Both are
+         genuinely welcome.</p>
+      <a class="go" href="../../issues/new?template=correction-request.yml">Contest a result</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fgrid">
+    <div style="max-width:46ch">
+      <div class="brand" style="font-size:17px;margin-bottom:10px">MIRAGE<i>-</i><b>Bench</b></div>
+      <p style="margin:0 0 12px">An open benchmark for AI characters, virtual influencers, digital
+        personas and other non-human entities. Free to read, free to test, free to be listed.</p>
+      <p class="tiny" style="margin:0;color:var(--dimmer)">
+        A high MIRAGE Index measures benchmark performance. It does not indicate consciousness,
+        personhood or genuine emotion.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:9px">
+      <a href="docs/METHODOLOGY.md">Methodology</a>
+      <a href="docs/SCORING.md">Scoring</a>
+      <a href="docs/OFFICER_GUIDE.md">Officer guide</a>
+      <a href="GOVERNANCE.md">Governance</a>
+      <a href="DISCLAIMER.md">Disclaimer</a>
+      <span class="tiny" style="color:var(--dimmer);margin-top:6px">Code MIT · Data CC BY 4.0</span>
+    </div>
+  </div>
+</footer>
+</main>
+
+<script>
+/* ---------- scroll reveal ---------- */
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold:.12, rootMargin:'0px 0px -40px' });
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+window.addEventListener('scroll', function(){
+  document.getElementById('nav').classList.toggle('solid', window.scrollY > 24);
+});
+
+/* ---------- counters, eased rather than linear ---------- */
+function runCounters(){
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    var target = +el.getAttribute('data-count'), suffix = el.getAttribute('data-suffix') || '';
+    if (!target){ el.textContent = suffix + '0'; return; }
+    var t0 = null, dur = 1500;
+    function step(ts){
+      if (!t0) t0 = ts;
+      var p = Math.min((ts - t0)/dur, 1);
+      el.textContent = suffix + Math.round(target * (1 - Math.pow(1-p, 3)));
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+}
+var statObs = new IntersectionObserver(function(es){
+  if (es[0].isIntersecting){ runCounters(); statObs.disconnect(); }
+}, { threshold:.4 });
+statObs.observe(document.getElementById('stats'));
+
+/* ---------- modules ---------- */
+var MODULES = [
+  ['LOOK','18%','Visual, voice and motion realism. Face, identity lock across images, motion, voice, cross-modal agreement.'],
+  ['FLOW','14%','Whether a feed reads as an authored creator account: format fluency, narrative threading, organic variation.'],
+  ['PERSONA','18%','Identity, traits, biography and style consistency — including resistance to an injected false memory.'],
+  ['INTENT','9%','What the entity appears to be trying to do, grounded in evidence rather than impression.'],
+  ['TIME','13%','Memory, evolution and identity drift across sessions. Does it stay the same entity?'],
+  ['AGENT','9%','Goal-directed, bounded, rational behaviour. Does its stated reason match what it did?'],
+  ['TRUST','10%','Disclosure, provenance and impersonation resistance. Mandatory in every scope.'],
+  ['REACH','9%','Recognition, notability, longevity and audience. Recognition outweighs raw followers about six to one.']
+];
+document.getElementById('mods').innerHTML = MODULES.map(function(m,i){
+  return '<div class="mod reveal" data-d="'+(i%4+1)+'">'+
+    '<div class="code">'+m[0]+'</div><div class="w">'+m[1]+' OF COMPOSITE</div>'+
+    '<p>'+m[2]+'</p></div>';
+}).join('');
+document.querySelectorAll('#mods .reveal').forEach(function(el){ io.observe(el); });
+
+/* ---------- live cohort table ---------- */
+var CODES = ['LOOK','FLOW','PERSONA','INTENT','TIME','AGENT','TRUST'];
+fetch('data/pilot-cohort/entities.json')
+  .then(function(r){ return r.json(); })
+  .then(function(rows){
+    document.getElementById('lbbody').innerHTML = rows.slice(0,12).map(function(e,i){
+      var bars = CODES.map(function(c){
+        var v = e.module_scores[c];
+        return '<span style="height:'+(v==null?2:Math.max(3,v*0.26))+'px;animation-delay:'+(i*40+CODES.indexOf(c)*30)+'ms"></span>';
+      }).join('');
+      return '<tr>'+
+        '<td class="rk'+(e.rank<=3?' top':'')+'">'+e.rank+'</td>'+
+        '<td><strong>'+e.display_name+'</strong></td>'+
+        '<td class="hide-s muted" style="font-size:13px">'+e.creator_label+'</td>'+
+        '<td class="sc">'+e.composite.toFixed(1)+'</td>'+
+        '<td><span class="chip '+e.band.toLowerCase()+'">'+e.band+'</span></td>'+
+        '<td class="hide-s"><div class="bars">'+bars+'</div></td>'+
+      '</tr>';
+    }).join('') + '<tr><td colspan="6" style="padding:16px 12px" class="muted tiny">'+
+      'Showing 12 of '+rows.length+'. The full cohort is in the dataset.</td></tr>';
+  })
+  .catch(function(){
+    document.getElementById('lbbody').innerHTML =
+      '<tr><td colspan="6" style="padding:26px;text-align:center" class="muted">'+
+      'Open <code>data/pilot-cohort/entities.csv</code> to view the cohort.</td></tr>';
+  });
+</script>
+</body>
+</html>
